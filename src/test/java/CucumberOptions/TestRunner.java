@@ -11,6 +11,9 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
   features="C:\\Users\\LENOVO\\eclipse-workspace\\Project8_Cucumber\\src\\test\\java\\FeatureFiles\\login.feature",
   glue="StepDefination",
+  plugin={"pretty","html:target/HtmlReports",
+					"json:target/JSONReports/report.json",
+					"junit:target/junitReports/Reports.xml"},
   tags="@regression"
   
        )
