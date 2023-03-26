@@ -4,7 +4,7 @@ package StepDefination;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import LoginPageObjects.SaleLoginPage;
 import Resources.ConstantsSales;
@@ -61,7 +61,10 @@ public class LoginStepDefination {
     @Before
     public void setup()  {
     	
-    	driver=new ChromeDriver();
+    	 ChromeOptions op=new ChromeOptions();
+	     op.addArguments("--remote-allow-origins=*"); 
+   	  
+   	     driver=new ChromeDriver(op); 
     }
 
     @After
